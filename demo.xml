@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<webabx_fileset>
+
+  <!-- each menu needs a unique ID -->
+  <!-- each menu should have a unique "pretty name" for display -->
+  <menu id="audiosource" default="Guitar">Audio Source</menu>
+  <menu id="mic">Mic</menu>
+  <menu id="distance" default="2 feet">Distance</menu>
+
+  <!-- <menuimages> id must exactly match the "menu id" defined in the <menu> tag. -->
+  <!-- The keys here should be exactly as defined in the <file> definition below. -->
+  <!-- You don't have to have a <menuimages> for all menus, just the ones you care about. -->
+  <!-- For a given <menuimages>, you don't have to define a value for every possible key
+       that might appear in that menu, only the ones you want to see images for. -->
+  <menuimages id="audiosource">
+    <menuimage key="Mandolin" value="demo_preview_images/mandolin.jpg" />
+    <menuimage key="Guitar" value="demo_preview_images/guitar.jpg">This is the caption for the Guitar image.</menuimage>
+    <menuimage key="Piano" value="demo_preview_images/piano.jpg">This is the caption for the Piano image.</menuimage>
+  </menuimages>
+
+  <menuimages id="mic">
+    <menuimage key="AKG C535" value="demo_preview_images/535.jpg">AKG C535-EB small diaphragm condenser</menuimage>
+    <menuimage key="CAD VX2" value="demo_preview_images/vx2.jpg">CAD VX2 US-made tube mic with OS125 capsule</menuimage>
+    <menuimage key="Homemade Electret" value="demo_preview_images/electret.jpg">A cheap/simple home-made mic with a Primo EM184 capsule in it.</menuimage>
+  </menuimages>
+  
+  <!-- files can use the menu IDs from above. E.g. if you have
+       <menu id="geartype">Gear Type</menu>
+       
+        ...then in the file section you can use:
+
+        <file path="/audio/blah.mp3"
+              geartype="Equalizers"
+         />
+
+         That will create a menu titled "Gear Type" with an entry
+         in it called "Equalizers" which, when used to filter, will
+         include this file.
+         
+         Make sure that the menu id "geartype" matches exactly the
+         file attribute "geartype=". Similarly the values of these
+         parameters (meaning 'compressor' in geartype="compressor")
+         should match each other exactly.
+  -->
+
+  <file path="demo_audio/guitar-535-6inches.mp3"
+        name="Guitar - AKG C535 - 6 inches"
+        audiosource="Guitar"
+        mic="AKG C535"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/guitar-535-2feet.mp3"
+        name="Guitar - AKG C535 - 2 feet"
+        audiosource="Guitar"
+        mic="AKG C535"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/guitar-535-10feet.mp3"
+        name="Guitar - AKG C535 - 10 feet"
+        audiosource="Guitar"
+        mic="AKG C535"
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/guitar-vx2-6inches.mp3"
+        name="Guitar - CAD VX2 - 6 inches"
+        audiosource="Guitar"
+        mic="CAD VX2"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/guitar-vx2-2feet.mp3"
+        name="Guitar - CAD VX2 - 2 feet"
+        audiosource="Guitar"
+        mic="CAD VX2"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/guitar-vx2-10feet.mp3"
+        name="Guitar - CAD VX2 - 10 feet"
+        audiosource="Guitar"
+        mic="CAD VX2"
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/guitar-electret-6inches.mp3"
+        name="Guitar - Electret - 6 inches"
+        audiosource="Guitar"
+        mic="Homemade Electret"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/guitar-electret-2feet.mp3"
+        name="Guitar - Electret - 2 feet"
+        audiosource="Guitar"
+        mic="Homemade Electret"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/guitar-electret-10feet.mp3"
+        name="Guitar - Electret - 10feet"
+        audiosource="Guitar"
+        mic="Homemade Electret"
+        distance="10 feet"
+        />
+
+
+
+  <file path="demo_audio/mandolin-535-6inches.mp3"
+        name="Mandolin - AKD C535 - 6 inches"
+        audiosource="Mandolin"
+        mic="AKG C535"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/mandolin-535-2feet.mp3"
+        name="Mandolin - AKG C535 - 2 feet"
+        audiosource="Mandolin"
+        mic="AKG C535"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/mandolin-535-10feet.mp3"
+        name="Mandolin - AKG C535 - 10 feet"
+        audiosource="Mandolin"
+        mic="AKG C535"
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/mandolin-vx2-6inches.mp3"
+        name="Mandolin - CAD VX2 - 6 inches"
+        audiosource="Mandolin"
+        mic="CAD VX2"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/mandolin-vx2-2feet.mp3"
+        name="Mandolin - CAD VX2 - 2 feet"
+        audiosource="Mandolin"
+        mic="CAD VX2"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/mandolin-vx2-10feet.mp3"
+        name="Mandolin - CAD VX2 - 10 feet"
+        audiosource="Mandolin"
+        mic="CAD VX2"
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/mandolin-electret-6inches.mp3"
+        name="Mandolin - Electret - 6 inches"
+        audiosource="Mandolin"
+        mic="Homemade Electret"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/mandolin-electret-2feet.mp3"
+        name="Mandolin - Electret - 2 feet"
+        audiosource="Mandolin"
+        mic="Homemade Electret"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/mandolin-electret-10feet.mp3"
+        name="Mandolin - Electret - 10 feet"
+        audiosource="Mandolin"
+        mic="Homemade Electret"
+        distance="10 feet"
+        />
+
+
+
+  <file path="demo_audio/piano-535-6inches.mp3"
+        name="Piano - AKG C535 - 6 inches"
+        audiosource="Piano"
+        mic="AKG C535"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/piano-535-2feet.mp3"
+        name="Piano - AKG C535 - 2 feet"
+        audiosource="Piano"
+        mic="AKG C535"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/piano-535-10feet.mp3"
+        name="Piano - AKG C535 - 10 feet"
+        audiosource="Piano"
+        mic="AKG C535"
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/piano-vx2-6inches.mp3"
+        name="Piano - CAD VX2 - 6 inches"
+        audiosource="Piano"
+        mic="CAD VX2"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/piano-vx2-2feet.mp3"
+        name="Piano - CAD VX2 - 2 feet"
+        audiosource="Piano"
+        mic="CAD VX2"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/piano-vx2-10feet.mp3"
+        name="Piano - CAD VX2 - 10 feet"
+        audiosource="Piano"
+        mic="CAD VX2" 
+        distance="10 feet"
+        />
+
+  <file path="demo_audio/piano-electret-6inches.mp3"
+        name="Piano - Electret - 6 inches"
+        audiosource="Piano"
+        mic="Homemade Electret"
+        distance="6 inches"
+        />
+
+  <file path="demo_audio/piano-electret-2feet.mp3"
+        name="Piano - Electret - 2 feet"
+        audiosource="Piano"
+        mic="Homemade Electret"
+        distance="2 feet"
+        />
+
+  <file path="demo_audio/piano-electret-10feet.mp3"
+        name="Piano - Electret - 10 feet"
+        audiosource="Piano"
+        mic="Homemade Electret"
+        distance="10 feet"
+        />
+
+</webabx_fileset>

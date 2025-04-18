@@ -1,0 +1,674 @@
+/*
+
+Lacinato WebABX/Shootouter
+Version 1.61
+
+http://lacinato.com/webabx
+
+Copyright 2015, 2016 Casey Connor, All Rights Reserved.
+
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and THE PROVIDER will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.
+
+Please see http://lacinato.com/webabx for licensing costs and related information.
+
+*/
+
+/**************************
+
+This file contains developer-specified CSS rules. It is recommended that you make your customizations in
+webabx_customizations.css rather than altering this file, which may be updated any time a new version of
+the software is released.
+
+***************************/
+
+/*
+  Inspect generated HTML in your webpage for all the CSS ids you may want to modify. This file indicates roughly 95% of those available.
+*/
+
+body:after
+{
+    /* I suggest you add any icon images you use to this block to trigger pre-loading of images on pageload */
+
+    display:none;
+    content: url("webabx_images/media_repeat25_h.png") url("webabx_images/media_repeat25.png") url("webabx_images/play_button25_h.png") url("webabx_images/play_button25.png") url("webabx_images/play_button25_c.png") url("webabx_images/volume_icon20.png") url("webabx_images/bigL25.png") url("webabx_images/progress-dots.gif") url("webabx_images/file_remove_icon.png") url("webabx_images/file_remove_icon_h.png");
+}
+
+div.webabx p
+{
+    margin: 0px 0px 3px 0px;
+}
+
+div.webabx
+{
+    display:inline-block;
+    position:relative;
+    border: 1px solid #000;
+    padding:5px 5px 0px 5px;
+    margin:5px;
+    border-radius:7px;
+    background: linear-gradient(to bottom, rgba(170, 174, 170, 1), rgba(160, 160, 160, 1));
+}
+
+.webabx_button
+{
+    border: 1px solid #000;
+    border-radius:5px;
+    text-align:center;
+    padding:1px;
+    margin:1px;
+}
+
+.webabx_button:hover
+{
+    /*background-color: rgba(0,150,0,0.1);*/
+    background: linear-gradient(to bottom, rgba(150, 150, 150, 0.05), rgba(150, 150, 150, 0.2));
+}
+
+.webabx_button:active
+{
+    /*background-color: rgba(200,255,200,0.2);*/
+    background: linear-gradient(to bottom, rgba(100,100,100,0.1), rgba(100,100,100,0.3));
+}
+
+.webabx_button_enabled
+{
+    /*background-color: rgba(0,150,0,0.1);*/
+    background: linear-gradient(to bottom, rgba(0,150,0,0.05), rgba(0,150,0,0.25));
+}
+
+.webabx_button_disabled
+{
+    /* background-color: rgba(0,100,0,0.3);*/
+    background: linear-gradient(to bottom, rgba(100,100,100,0.15), rgba(100,100,100,0.4));
+}
+
+div.webabx_abx
+{
+    /* abx comparison only, top-div stylings */
+    width:550px;
+}
+
+div.webabx_shootout
+{
+    /* shootout comparison only, top-div stylings */
+    width:530px;
+}
+
+div.webabx_compare
+{
+    /* generic comparison only, top-div stylings */
+    width:550px;
+}
+
+div.webabx_comparison_title
+{
+    /* for any form (abx, shootout, compare) this styles the title */
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-left:20px;
+}
+
+div.webabx_load_progress_wrap
+{
+    position: absolute;
+    border:1px solid;
+    /*background: linear-gradient(to bottom, rgba(100,100,0,0.15), rgba(100,100,0,0.3));*/
+    background: linear-gradient(to bottom, rgba(200, 200, 100, 0.93), rgba(200, 200, 100, 1));
+    padding: 10px;
+    text-align: center;
+    top: 50px;
+    left: 50px;
+    width: 270px;    
+    z-index: 999;
+}
+
+div.webabx_load_progress_wrap_enabled
+{
+    display:inline;
+}
+
+div.webabx_load_progress_wrap_disabled
+{
+    display:none;
+}
+
+div.webabx_load_progress_text
+{
+    font-style:italic;
+}
+
+div.webabx_load_progress_icon
+{
+    background-image:url("webabx_images/progress-dots.gif");
+    border:none;
+    width:18px;
+    height:4px;
+    margin: 10px 0px 5px 120px;
+}
+
+div.webabx_audio_loading_error
+{
+    position: absolute;
+    border:1px solid;
+    background: linear-gradient(to bottom, rgba(100,100,0,0.15), rgba(100,100,0,0.3));
+    background: linear-gradient(to bottom, rgba(200, 200, 100, 0.93), rgba(200, 200, 100, 1));
+    padding: 10px;
+    text-align: center;
+    top: 50px;
+    left: 50px;
+    width: 270px;
+    z-index:1000;
+}
+
+div.webabx_audio_loading_error_disabled
+{
+    display:none;
+}
+
+div.webabx_audio_loading_error_enabled
+{
+    display:inline-block;
+}
+
+div.webabx_menus_wrap
+{
+    /* top-level wrap for menus */
+    float:left;
+    width:100%;
+    margin-bottom:7px;
+}
+
+div.webabx_menu_wrap
+{
+    /* wrap for each menu */
+    float: left;
+    margin: 0px 10px 0px 0px;
+    font-size: 75%;
+    display:inline-block;
+}
+
+div.webabx_menu_title
+{
+    /* the title just above the drop-down menu */
+}
+
+select.webabx_tagselect
+{
+    /* HTML select element for a drop-down menu */
+    border:1px solid;
+    border-color: rgba(0,30,0,.3);
+    color:#003000;
+    background-color:transparent;
+}
+
+option.webabx_menuoption
+{
+    /* HTML menu option element */
+    background-color:rgb(175,190,185);
+    color:#003000;
+}
+
+div.webabx_filter_buttons
+{
+    width:10%;
+    float:right;
+    margin-top:15px;
+}
+
+/* AKA the "Filter" button */
+div.webabx_search_button
+{
+    float:right;
+    margin:4px;
+    font-size:75%;
+    width:65px;
+}
+
+div.webabx_add_button
+{
+    float:right;
+    margin:4px;
+    font-size:75%;
+    width:65px;
+}
+
+div.webabx_menu_results_wrap
+{
+    display:inline-block;
+    width:85%;
+    margin-bottom:5px;
+    float:left;
+}
+
+div.webabx_menu_results_title
+{
+    display:block;
+    width:100%;
+    font-size:60%;
+    padding-left: 10px;
+}
+
+select.webabx_menu_results_multichoice
+{
+    width:100%;
+    overflow-y: scroll;
+    border:1px solid #000;
+    /*background-color:rgba(0,100,40,0.09);*/
+    background: linear-gradient(to bottom, rgba(100, 255, 100, 0.075), rgba(0, 100, 0, 0.05));
+    height:7em;
+}
+
+div.webabx_player_wrap
+{
+    /* top-level wrap for all players */
+    /* border-bottom: 1px dotted;
+       border-color: rgba(200,255,230,0.44);*/
+    clear:left;
+    height:28px;
+}
+
+div.webabx_player_wrap_evenrow
+{
+    /* all rows are "even" unless there are >5 rows */
+}
+
+div.webabx_player_wrap_oddrow
+{
+    /* all rows are "even" unless there are >5 rows */
+    background-color:rgba(0,190,0,0.05);
+}
+
+
+div.webabx_filelabel
+{
+    /* e.g. "A:" */
+    display:inline-block;
+    font-weight: bold;
+    width:25px;
+    margin-left:7px;
+}
+
+div.webabx_filename
+{
+    /* file name field */
+    display:inline-block;
+    width:240px;
+    font-size:75%;
+}
+
+div.webabx_compare .webabx_filename
+{
+    width:250px;
+}
+
+div.webabx_loop_button
+{
+    /* master loop enable/disable button */
+    float:left;
+    margin:0px;
+    padding:0px;
+}
+
+div.webabx_loop_button.webabx_button_enabled
+{
+    background-image:url("webabx_images/media_repeat25_h.png");
+    background-color:transparent;
+    border:none;
+    width:27px;
+    height:25px;
+}
+
+div.webabx_loop_button.webabx_button_disabled
+{
+    background-image:url("webabx_images/media_repeat25.png");
+    background-color:transparent;
+    border:none;
+    width:27px;
+    height:25px;
+}
+
+div.webabx_x_button
+{
+    /* file removal "x" button */
+    display:inline-block;
+    margin:0px 2px 0px 0px;
+    width:15px;
+    height:15px;
+    padding:0px;
+    vertical-align: text-bottom;
+}
+
+div.webabx_x_button:hover
+{
+    /* play/stop button for each file, when button enabled */
+    background-image:url("webabx_images/file_remove_icon_h.png") !important;
+    background-color:transparent;
+    border:none;
+}
+
+div.webabx_x_button.webabx_button_disabled
+{
+    /* play/stop button for each file, when button disabled */
+    background-image:url("webabx_images/file_remove_icon.png");
+    background-color:transparent;
+    border:none;
+}
+
+div.webabx_choose_button
+{
+    /* file choose button */
+    display:inline-block;
+    margin:0px 5px 0px 0px;
+    font-size:75%;
+    vertical-align:middle;
+}
+
+div.webabx_playstop_button
+{
+    /* play/stop button for each file */
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+    vertical-align:sub;
+}
+
+div.webabx_playstop_button.webabx_button_enabled
+{
+    /* play/stop button for each file, when button enabled */
+    background-image:url("webabx_images/play_button25_h.png");
+    background-color:transparent;
+    border:none;
+    width:16px;
+    height:23px;
+}
+
+div.webabx_playstop_button.webabx_button_disabled
+{
+    /* play/stop button for each file, when button disabled */
+    background-image:url("webabx_images/play_button25.png");
+    background-color:transparent;
+    border:none;
+    width:16px;
+    height:23px;
+}
+
+div.webabx_playstop_button:active
+{
+    background-image:url("webabx_images/play_button25_c.png");
+}
+
+div.webabx_audio_wrap
+{
+    /* (invisible) wrapper div for actual (invisible) audio player */
+    display:none;
+}
+
+audio.webabx_player
+{
+/* for the audio element itself -- but it's invisible */
+}
+
+div.webabx_gain_wrap
+{
+    display: inline-block;
+    vertical-align:text-top;
+}
+
+div.webabx_gain_slider
+{
+/* range slider for gain setting */
+}
+
+div.webabx_gain_icon
+{
+    /* icon for gain slider */
+    background-image:url("webabx_images/volume_icon20.png");
+    height:20px;
+    width:20px;
+    float:right;
+    margin-left:5px;
+}
+
+div.webabx_playranges_wrap
+{
+    /* wrap for play ranges section */
+    clear:left;
+    padding-top:10px;
+    margin-bottom:7px;
+}
+
+div.webabx_ranges_slider_wrap
+{
+    /* for all the main sliders */
+    clear:left;
+}
+
+input.webabx_range_slider
+{
+    /* for all the main sliders */
+    width:400px;
+}
+
+div.webabx_shootout .webabx_range_slider
+{
+    width:350px;
+}
+  
+/* IE 11 */
+input[type="range"].webabx_slider::-ms-tooltip
+{
+    display:none;
+}
+input[type="range"].webabx_slider::-ms-fill-upper
+{
+    background-color: #bcb;
+}
+input[type="range"].webabx_slider::-ms-fill-lower
+{
+    background-color: #bcb;
+}
+
+input[type="range"].webabx_slider
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* IE 11*/
+input[type="range"].webabx_gain_slider
+{
+    width:140px;
+}
+
+div.webabx_ranges_column_div
+{
+    /* for all the main sliders */
+    width:95px;
+    height:20px;
+    float:left;
+    margin-right:7px;
+}
+
+div.webabx_play_position_text
+{
+    padding-top:3px;
+    text-align:right;
+}
+
+div.webabx_play_position_slider_wrap
+{
+}
+
+div.webabx_play_position_loop_div
+{
+}
+
+div.webabx_play_position_loop_text
+{
+}
+
+div.webabx_left_bounds_slider_wrap
+{
+    font-size:75%;
+}
+
+div.webabx_right_bounds_slider_wrap
+{
+    font-size:75%;
+}
+
+input.webabx_play_position_slider
+{
+}
+
+input.webabx_left_bounds_slider
+{
+}
+
+input.webabx_right_bounds_slider
+{
+}
+
+div.webabx_play_position_left_bounds_text_div
+{
+    text-align:right;
+}
+
+div.webabx_play_position_right_bounds_text_div
+{
+    text-align:right;
+}
+
+div.webabx_control_wrap
+{
+    /* wrapper for "start test" and "show/hide" results, etc */
+    padding-left:128px;
+}
+
+div.webabx_abxstart_button
+{
+    /* "start test" button */
+    width:100px;
+    float:left;
+}
+
+div.webabx_shootoutstart_button
+{
+    /* "start shootout" button */
+    width:130px;
+    float:left;
+}
+
+div.webabx_results_button
+{
+    /* "show/hide results" button */
+    width:120px;
+    float:left;
+}
+
+div.webabx_reset_button
+{
+    /* "show/hide results" button */
+    width:65px;
+    float:left;
+}
+
+div.webabx_tests_complete_wrap
+{
+    /* wrapper for test count text */
+    clear:left;
+}
+
+div.webabx_test_complete_text
+{
+    /* holds test count text */
+    float:left;
+    margin-bottom:5px;
+}
+
+div.webabx_test_complete_value
+{
+    /* holds the value of the number of tests completed */
+    float:left;
+    padding-left: 5px;
+}
+
+div.webabx_results_wrap
+{
+    /* wraps the text area with the test results in it */
+    clear:left;
+    padding-top: 8px;
+}
+
+div.webabx_results
+{
+    /* the text area with the test results in it */
+    border: 1px solid #000;
+    border-radius:5px;
+    clear:left;
+    height:100px;
+    overflow-y:scroll;
+    padding:3px;
+}
+
+div.webabx_results.webabx_results_hidden
+{
+    /* the text area with the test results in it, hidden */
+    /*background-color:rgba(0,50,0,0.2);*/
+    background: linear-gradient(to bottom, rgba(0, 50, 0, 0.05), rgba(0, 50, 0, 0.20));
+}
+
+div.webabx_results.webabx_results_visible
+{
+    /* the text area with the test results in it, visible */
+    /* background-color:rgba(100,255,100,0.1); */
+    background: linear-gradient(to bottom, rgba(100, 255, 100, 0.075), rgba(0, 100, 0, 0.25));
+}
+
+div.webabx_attribution_wrap
+{
+    /* please leave this div visible unless you are a paid customer -- thanks! */
+    border-top: 1px solid #000;
+    margin-top: 2px;
+}
+
+div.webabx_attribution_icon
+{
+    /* please leave this div visible unless you are a paid customer -- thanks! */
+    float:left;
+    margin: 2px 5px;
+    width:16px;
+    height:25px;
+    background-image:url("webabx_images/bigL25.png");
+}
+
+div.webabx_attribution
+{
+    /* please leave this div visible unless you are a paid customer -- thanks! */
+    padding-top:7px;
+    font-size:75%;
+    font-style:italic;
+}
+
+div.webabx_preview_image_wrap
+{
+    /* the text area with the test results in it */
+    border: 1px solid #000;
+    border-radius:5px;
+    padding:0px;
+    display:inline-block;
+    overflow:hidden;
+}
+
+div.webabx_preview_image
+{
+    width:250px;
+    height:300px;
+    background-repeat: no-repeat;
+}
+
+div.webabx_preview_image_caption
+{
+    width:250px;
+    height:75px;
+}
